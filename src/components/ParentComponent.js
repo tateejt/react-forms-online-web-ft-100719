@@ -19,13 +19,16 @@ class ParentComponent extends React.Component {
     })
   }
  
-  render() {
+ render() {
     return (
-      <Form
-        formData={this.state}
-        handleFirstNameChange={this.handleFirstNameChange}
-        handleLastNameChange={this.handleLastNameChange}
-      />
+      <div>
+        <Form
+          formData={this.state}
+          handleFirstNameChange={this.handleFirstNameChange}
+          handleLastNameChange={this.handleLastNameChange}
+        />
+        <DisplayData formData={this.state} />
+      </div>
     )
   }
 }
